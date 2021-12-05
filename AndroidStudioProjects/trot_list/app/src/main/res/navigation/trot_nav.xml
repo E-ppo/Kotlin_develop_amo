@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/trot_nav"
+    app:startDestination="@id/songFragment">
+
+    <fragment
+        android:id="@+id/songFragment"
+        android:name="com.example.trot_list.SongFragment"
+        android:label="fragment_song"
+        tools:layout="@layout/fragment_song" >
+        <action
+            android:id="@+id/action_songFragment_to_youngFragment"
+            app:destination="@id/youngFragment" />
+        <action
+            android:id="@+id/action_songFragment_to_yimFragment"
+            app:destination="@id/yimFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/yimFragment"
+        android:name="com.example.trot_list.YimFragment"
+        android:label="fragment_yim"
+        tools:layout="@layout/fragment_yim" >
+        <action
+            android:id="@+id/action_yimFragment_to_youngFragment"
+            app:destination="@id/youngFragment" />
+        <action
+            android:id="@+id/action_yimFragment_to_songFragment"
+            app:destination="@id/songFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/youngFragment"
+        android:name="com.example.trot_list.YoungFragment"
+        android:label="fragment_young"
+        tools:layout="@layout/fragment_young" >
+        <action
+            android:id="@+id/action_youngFragment_to_yimFragment"
+            app:destination="@id/yimFragment" />
+        <action
+            android:id="@+id/action_youngFragment_to_songFragment"
+            app:destination="@id/songFragment" />
+    </fragment>
+</navigation>
